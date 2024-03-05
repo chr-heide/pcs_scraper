@@ -3,3 +3,4 @@ beautifulsoup4
 lxml
 notebook==6.5.6
 requests
+tqdm

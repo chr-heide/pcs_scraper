@@ -1,3 +1,6 @@
+# This main script will update the .csv-file containing results from the current year
+# The script can be run as-is
+
 from pcs_scraper import PcsScraper
 import datetime
 
