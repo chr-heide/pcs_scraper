@@ -2,6 +2,6 @@
 
 from pcs_scraper import PcsScraper
 
-scraper = PcsScraper(start_year=2019, end_year=2019)
+scraper = PcsScraper(start_year=2024, end_year=2024)
 df = scraper.get_dataframe(startlist=False)
-df.to_csv(f"data/2019_results.csv")
+df.to_csv(f"data/2024_results.csv")

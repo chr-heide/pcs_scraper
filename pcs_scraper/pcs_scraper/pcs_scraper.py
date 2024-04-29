@@ -26,10 +26,10 @@ class PcsScraper:
         # Running a number of checks to ensure that the url is scapeable
         if soup.find('h1').text == "Page not found":
             return None
-        elif soup.select('tbody')[0].text == "\n":
-            return None
+        #elif soup.select('tbody')[0].text == "\n":
+            #return None
         elif "(TTT)" in soup.select('title')[0].text:
-            return None
+            pass
         if table:
             return soup, soup.select('tbody')[0]
         else:
@@ -47,7 +47,7 @@ class PcsScraper:
     @staticmethod
     def gen_startlist_urls(race, stages=None):
         if stages is None:
-            stages = list(range(0, 22))
+            stages = list(range(1, 22))
         race_dict = {
             'giro': [f'https://www.procyclingstats.com/race/giro-d-italia/{datetime.datetime.now().year}/stage-',
                      f'https://www.procyclingstats.com/race/giro-d-italia/{datetime.datetime.now().year}/startlist'],
